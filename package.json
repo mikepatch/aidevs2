@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --exec ts-node"
+    "helloapi": "ts-node src/tasks/helloapi.ts",
+    "moderation": "ts-node src/tasks/moderation.ts"
   },
   "author": "MikePatch",
   "license": "ISC",
