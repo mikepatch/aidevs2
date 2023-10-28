@@ -5,7 +5,7 @@ class OpenaiProvider {
   rootUrl: string;
 
   constructor() {
-    this.API_KEY = process.env.MY_API_KEY!;
+    this.API_KEY = process.env.OPENAI_API_KEY!;
     this.rootUrl = "https://api.openai.com/v1/moderations";
   }
 

@@ -6,9 +6,9 @@ class TasksProvider {
   rootUrl: string;
 
   constructor() {
-    this.API_KEY = process.env.API_KEY!;
+    this.API_KEY = process.env.AIDEVS_API_KEY!;
     this.token = "";
-    this.rootUrl = process.env.ROOT_URL!;
+    this.rootUrl = "https://zadania.aidevs.pl";
   }
 
   async getTask(taskName: string) {
