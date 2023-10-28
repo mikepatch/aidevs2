@@ -3,7 +3,6 @@ import { ModerateResult } from "../services/types";
 
 (async () => {
   const { input } = await TasksProvider.getTask("moderation");
-
   const { results } = await OpenaiProvider.moderate(input);
   const answer = Array.from(results, (result) => isFlagged(result));
 
