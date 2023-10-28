@@ -1,4 +1,4 @@
-import { AuthorizeResponse, TaskResponse } from "./types";
+import { AnswerType, AuthorizeResponse, TaskResponse } from "./types";
 
 class TasksProvider {
   protected API_KEY: string;
@@ -22,7 +22,7 @@ class TasksProvider {
     return this._fetch(options, `/task/${token}`) as Promise<TaskResponse>;
   }
 
-  async sendAnswer(answer: string) {
+  async sendAnswer(answer: AnswerType) {
     const options: RequestInit = {
       method: "POST",
       body: JSON.stringify({ answer }),
