@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "helloapi": "ts-node src/tasks/helloapi.ts",
-    "moderation": "ts-node src/tasks/moderation.ts"
+    "moderation": "ts-node src/tasks/moderation.ts",
+    "blogger": "ts-node src/tasks/blogger.ts"
   },
   "author": "MikePatch",
   "license": "ISC",
