@@ -2,21 +2,26 @@
   "name": "aidevs-tasks",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.ts",
+  "type": "module",
   "scripts": {
-    "helloapi": "ts-node src/tasks/helloapi.ts",
-    "moderation": "ts-node src/tasks/moderation.ts",
-    "blogger": "ts-node src/tasks/blogger.ts"
+    "helloapi": "bun src/tasks/helloapi.ts",
+    "moderation": "bun src/tasks/moderation.ts",
+    "blogger": "bun src/tasks/blogger.ts",
+    "liar": "bun src/tasks/liar.ts",
+    "inprompt": "bun src/tasks/inprompt.ts",
+    "langsmith": "bun src/tasks/langSmith.ts"
   },
   "author": "MikePatch",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.3.1",
-    "nodemon": "^3.0.1"
+    "langchain": "^0.0.175",
+    "openai": "^4.14.1"
   },
   "devDependencies": {
-    "@tsconfig/node16": "^16.1.1",
-    "ts-node": "^10.9.1",
+    "@tsconfig/node20": "^20.1.2",
+    "bun-types": "^1.0.7",
     "typescript": "^5.2.2"
   }
 }
