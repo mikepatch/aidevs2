@@ -13,16 +13,25 @@ class TasksProvider {
 
   async getTask(taskName: string) {
     const options = { method: "GET" };
-    const { token, msg, code } = await this._authorize(taskName);
+    await this._authorize(taskName);
 
-    if (code < 0) throw new Error(msg);
-
-    this.token = token;
-
-    return this._fetch(options, `/task/${token}`) as Promise<TaskResponse>;
+    return this._fetch(options, `/task/${this.token}`) as Promise<TaskResponse>;
   }
 
-  async sendAnswer(answer: AnswerType) {
+  async getAnswer(taskName: string, question: string) {
+    await this._authorize(taskName);
+
+    const data = new URLSearchParams();
+    data.append("question", question);
+    const options: RequestInit = {
+      method: "POST",
+      body: data,
+    };
+
+    return this._fetch(options, `/task/${this.token}`) as Promise<TaskResponse>;
+  }
+
+  sendAnswer(answer: AnswerType) {
     const options: RequestInit = {
       method: "POST",
       body: JSON.stringify({ answer }),
@@ -31,16 +40,20 @@ class TasksProvider {
     return this._fetch(options, `/answer/${this.token}`);
   }
 
-  private _authorize(taskName: string) {
+  private async _authorize(taskName: string) {
     const options = {
       method: "POST",
       body: JSON.stringify({ apikey: this.API_KEY }),
     };
 
-    return this._fetch(
+    const { token, msg, code } = (await this._fetch(
       options,
       `/token/${taskName}`
-    ) as Promise<AuthorizeResponse>;
+    )) as AuthorizeResponse;
+
+    if (code < 0) throw new Error(msg);
+
+    this.token = token;
   }
 
   private async _fetch(options: RequestInit, additionalPath = "") {
@@ -50,7 +63,7 @@ class TasksProvider {
 
       return response.json();
     } catch (err) {
-      throw new Error("Connection error");
+      throw new Error(`Connection error: ${err}`);
     }
   }
 }
