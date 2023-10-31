@@ -7,9 +7,11 @@ export type AuthorizeResponse = {
 export type TaskResponse = {
   code: number;
   msg: string;
-  input: string;
+  input: string | string[];
   cookie?: string;
   blog?: string[];
+  answer?: string;
+  question?: string;
 };
 
 export type AnswerType = string | string[] | number | number[];
