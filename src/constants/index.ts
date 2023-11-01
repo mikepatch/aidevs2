@@ -1,3 +1,12 @@
+export const TASK_NAMES = {
+  helloapi: "helloapi",
+  moderation: "moderation",
+  blogger: "blogger",
+  liar: "liar",
+  inprompt: 'inprompt',
+  embedding: "embedding",
+};
+
 export const BLOG_POST_CREATOR_CONTEXT = `As a famous food blogger you create a wonderful and excellent content based on provided paragraph title
 ###
 Rules:
