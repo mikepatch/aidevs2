@@ -2,13 +2,16 @@ import { ChatOpenAI } from "langchain/chat_models/openai";
 import { HumanMessage, SystemMessage } from "langchain/schema";
 
 import { TasksProvider } from "../services";
+import { TaskResponse } from "../services/types";
+import { TASK_NAMES } from "../constants";
 
 (async () => {
+  const taskName = TASK_NAMES.inprompt;
   const { input: inputs, question } = (await TasksProvider.getTask(
-    "inprompt"
-  )) as { input: string[]; question: string };
+    taskName
+  )) as Omit<TaskResponse, "input"> & { input: string[] };
 
-  const chat = new ChatOpenAI({ maxConcurrency: 5 });
+  const chat = new ChatOpenAI();
   const { content: name } = await chat.call([
     new SystemMessage(
       `Find the name of the person inside the provided text and return only that name and nothing else`
@@ -23,7 +26,7 @@ import { TasksProvider } from "../services";
         context###${systemContext}###
         `
     ),
-    new HumanMessage(question),
+    new HumanMessage(question!),
   ]);
 
   const answerResponse = await TasksProvider.sendAnswer(answer);

@@ -2,12 +2,14 @@ import { PromptTemplate } from "langchain/prompts";
 import { TasksProvider } from "../services";
 import { LLMChain } from "langchain/chains";
 import { ChatOpenAI } from "langchain/chat_models/openai";
+import { TASK_NAMES } from "../constants";
 
 const chat = new ChatOpenAI();
 
 (async () => {
+  const taskName = TASK_NAMES.liar;
   const question = "Where is Gdansk?";
-  const { answer } = await TasksProvider.getAnswer("liar", question);
+  const { answer } = await TasksProvider.getAnswer(taskName, question);
   if (!answer) throw new Error("answer not found");
 
   const checkedAnswer = await checkAnswer(question, answer);

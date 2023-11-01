@@ -1,10 +1,10 @@
-import { BLOG_POST_CREATOR_CONTEXT } from "../constants";
-
-import { CompletionMessage } from "../services/types";
+import { BLOG_POST_CREATOR_CONTEXT, TASK_NAMES } from "../constants";
 import { OpenaiProvider, TasksProvider } from "../services";
+import { CompletionMessage } from "../services/types";
 
 (async () => {
-  const { blog } = await TasksProvider.getTask("blogger");
+  const taskName = TASK_NAMES.blogger;
+  const { blog } = await TasksProvider.getTask(taskName);
   if (!blog) throw new Error("blog not found");
 
   const answers = await createBlogPost(blog);
