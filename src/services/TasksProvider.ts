@@ -31,7 +31,7 @@ class TasksProvider {
     return this._fetch(options, `/task/${this.token}`) as Promise<TaskResponse>;
   }
 
-  sendAnswer(answer: AnswerType) {
+  async sendAnswer(answer: AnswerType) {
     const options: RequestInit = {
       method: "POST",
       body: JSON.stringify({ answer }),
@@ -61,9 +61,14 @@ class TasksProvider {
       const url = this.rootUrl + additionalPath;
       const response = await fetch(url, options);
 
+      if (!response.ok)
+        throw new Error(
+          `Request failed with status ${response.status} ${response.statusText}`
+        );
+
       return response.json();
     } catch (err) {
-      throw new Error(`Connection error: ${err}`);
+      console.error("Error: ", err);
     }
   }
 }
