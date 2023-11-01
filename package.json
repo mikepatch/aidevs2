@@ -10,6 +10,7 @@
     "blogger": "bun src/tasks/blogger.ts",
     "liar": "bun src/tasks/liar.ts",
     "inprompt": "bun src/tasks/inprompt.ts",
+    "embedding": "bun src/tasks/embedding.ts",
     "langsmith": "bun src/tasks/langSmith.ts"
   },
   "author": "MikePatch",
