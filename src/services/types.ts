@@ -28,6 +28,8 @@ export type ModerateResponse = {
   results: ModerateResult[];
 };
 
+export type GPTModel = "gpt-3.5-turbo" | "gpt-4"
+
 export type CompletionMessage = {
   role: "system" | "user" | "assistant" | "function";
   content: string | null;
@@ -40,3 +42,7 @@ export type CompletionChoice = {
 export type CompletionResponse = {
   choices: CompletionChoice[];
 };
+
+export type EmbeddingResponse = {
+
+}
