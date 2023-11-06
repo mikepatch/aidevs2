@@ -13,6 +13,7 @@ class TasksProvider {
 
   async getTask(taskName: string) {
     const options = { method: "GET" };
+
     await this._authorize(taskName);
 
     return this._fetch(options, `/task/${this.token}`) as Promise<TaskResponse>;
@@ -51,7 +52,10 @@ class TasksProvider {
       `/token/${taskName}`
     )) as AuthorizeResponse;
 
-    if (code < 0) throw new Error(msg);
+    if (code < 0)
+      throw console.error(
+        `Authorization. Request failed with status ${code} ${msg}`
+      );
 
     this.token = token;
   }
@@ -63,12 +67,12 @@ class TasksProvider {
 
       if (!response.ok)
         throw new Error(
-          `Request failed with status ${response.status} ${response.statusText}`
+          `TasksProvider.ts: Request failed with status ${response.status} ${response.statusText}`
         );
 
       return response.json();
     } catch (err) {
-      console.error("Error: ", err);
+      throw console.error("Error: ", err);
     }
   }
 }

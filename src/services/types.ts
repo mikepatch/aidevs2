@@ -14,7 +14,7 @@ export type TaskResponse = {
   question?: string;
 };
 
-export type AnswerType = string | string[] | number | number[];
+export type AnswerType = string | string[] | number | number[] | object;
 
 export type ModerateResult = {
   flagged: boolean;
@@ -28,7 +28,7 @@ export type ModerateResponse = {
   results: ModerateResult[];
 };
 
-export type GPTModel = "gpt-3.5-turbo" | "gpt-4"
+export type GPTModel = "gpt-3.5-turbo" | "gpt-4";
 
 export type CompletionMessage = {
   role: "system" | "user" | "assistant" | "function";
@@ -43,6 +43,4 @@ export type CompletionResponse = {
   choices: CompletionChoice[];
 };
 
-export type EmbeddingResponse = {
-
-}
+export type EmbeddingResponse = {};

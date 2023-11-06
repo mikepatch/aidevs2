@@ -1,9 +1,12 @@
+import * as fs from "fs";
+
 import {
   CompletionMessage,
   CompletionResponse,
   GPTModel,
   ModerateResponse,
 } from "./types";
+import { RequestOptions } from "https";
 
 class OpenaiProvider {
   private API_KEY: string;
@@ -28,7 +31,7 @@ class OpenaiProvider {
     messages: CompletionMessage[],
     model: GPTModel = "gpt-3.5-turbo"
   ) {
-    const options = {
+    const options: FetchRequestInit = {
       method: "POST",
       headers: this._getHeaders(),
       body: JSON.stringify({
@@ -44,7 +47,7 @@ class OpenaiProvider {
   }
 
   getEmbedding(input: string) {
-    const options: RequestInit = {
+    const options: FetchRequestInit = {
       method: "POST",
       headers: this._getHeaders(),
       body: JSON.stringify({ input: input, model: "text-embedding-ada-002" }),
@@ -62,19 +65,19 @@ class OpenaiProvider {
     return headers;
   }
 
-  private async _fetch(options: RequestInit, additionalPath = "") {
+  private async _fetch(options: FetchRequestInit, additionalPath = "") {
     try {
       const url = this.rootUrl + additionalPath;
       const response = await fetch(url, options);
 
       if (!response.ok)
         throw new Error(
-          `Request failed with status ${response.status} ${response.statusText}`
+          `OpenaiProvider.ts: Request failed with status ${response.status} ${response.statusText}`
         );
 
       return response.json();
     } catch (err) {
-      console.error("Error: ", err);
+      throw console.error("Error: ", err);
     }
   }
 }
