@@ -3,8 +3,10 @@ export const TASK_NAMES = {
   moderation: "moderation",
   blogger: "blogger",
   liar: "liar",
-  inprompt: 'inprompt',
+  inprompt: "inprompt",
   embedding: "embedding",
+  whisper: "whisper",
+  functions: "functions",
 };
 
 export const BLOG_POST_CREATOR_CONTEXT = `As a famous food blogger you create a wonderful and excellent content based on provided paragraph title
