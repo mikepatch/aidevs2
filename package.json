@@ -11,14 +11,15 @@
     "liar": "bun src/tasks/liar.ts",
     "inprompt": "bun src/tasks/inprompt.ts",
     "embedding": "bun src/tasks/embedding.ts",
-    "langsmith": "bun src/tasks/langSmith.ts"
+    "whisper": "bun src/tasks/whisper.ts",
+    "functions": "bun src/tasks/functions.ts"
   },
   "author": "MikePatch",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.3.1",
     "langchain": "^0.0.175",
-    "openai": "^4.14.1"
+    "openai": "^4.15.0"
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.2",
