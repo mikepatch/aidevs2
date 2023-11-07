@@ -7,6 +7,7 @@ export const TASK_NAMES = {
   embedding: "embedding",
   whisper: "whisper",
   functions: "functions",
+  rodo: "rodo",
 };
 
 export const BLOG_POST_CREATOR_CONTEXT = `As a famous food blogger you create a wonderful and excellent content based on provided paragraph title

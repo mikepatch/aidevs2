@@ -12,7 +12,8 @@
     "inprompt": "bun src/tasks/inprompt.ts",
     "embedding": "bun src/tasks/embedding.ts",
     "whisper": "bun src/tasks/whisper.ts",
-    "functions": "bun src/tasks/functions.ts"
+    "functions": "bun src/tasks/functions.ts",
+    "rodo": "bun src/tasks/rodo.ts"
   },
   "author": "MikePatch",
   "license": "ISC",
