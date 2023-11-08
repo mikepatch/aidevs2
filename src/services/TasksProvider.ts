@@ -65,11 +65,6 @@ class TasksProvider {
       const url = this.rootUrl + additionalPath;
       const response = await fetch(url, options);
 
-      if (!response.ok)
-        throw new Error(
-          `TasksProvider.ts: Request failed with status ${response.status} ${response.statusText}`
-        );
-
       return response.json();
     } catch (err) {
       throw console.error("Error: ", err);

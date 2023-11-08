@@ -28,7 +28,7 @@ import { TASK_NAMES } from "../constants";
     ),
     new HumanMessage(question!),
   ]);
-
+  console.log(answer);
   const answerResponse = await TasksProvider.sendAnswer(answer);
   console.log(answerResponse);
 })();
