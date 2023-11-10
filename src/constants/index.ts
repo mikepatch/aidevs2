@@ -9,6 +9,7 @@ export const TASK_NAMES = {
   functions: "functions",
   rodo: "rodo",
   scraper: "scraper",
+  whoami: 'whoami'
 };
 
 export const BLOG_POST_CREATOR_CONTEXT = `As a famous food blogger you create a wonderful and excellent content based on provided paragraph title

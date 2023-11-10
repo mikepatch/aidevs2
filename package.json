@@ -14,7 +14,8 @@
     "whisper": "bun src/tasks/whisper.ts",
     "functions": "bun src/tasks/functions.ts",
     "rodo": "bun src/tasks/rodo.ts",
-    "scraper": "bun src/tasks/scraper.ts"
+    "scraper": "bun src/tasks/scraper.ts",
+    "whoami": "bun src/tasks/whoami.ts"
   },
   "author": "MikePatch",
   "license": "ISC",
