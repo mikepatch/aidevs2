@@ -21,3 +21,6 @@ export const downloadAudio = async (targetPath: string, sourceUrl: string) => {
     throw console.error("Error: ", err);
   }
 };
+
+export const delayRequest = async (ms: number, info?: string) =>
+  new Promise((resolve) => setTimeout(() => resolve(console.log(info)), ms));
