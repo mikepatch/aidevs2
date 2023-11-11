@@ -15,7 +15,9 @@
     "functions": "bun src/tasks/functions.ts",
     "rodo": "bun src/tasks/rodo.ts",
     "scraper": "bun src/tasks/scraper.ts",
-    "whoami": "bun src/tasks/whoami.ts"
+    "whoami": "bun src/tasks/whoami.ts",
+    "search": "bun src/tasks/search.ts"
+
   },
   "author": "MikePatch",
   "license": "ISC",
