@@ -17,14 +17,15 @@
     "scraper": "bun src/tasks/scraper.ts",
     "whoami": "bun src/tasks/whoami.ts",
     "search": "bun src/tasks/search.ts"
-
   },
   "author": "MikePatch",
   "license": "ISC",
   "dependencies": {
+    "@qdrant/js-client-rest": "^1.6.0",
     "dotenv": "^16.3.1",
-    "langchain": "^0.0.175",
-    "openai": "^4.15.0"
+    "langchain": "^0.0.186",
+    "openai": "^4.15.0",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.2",
