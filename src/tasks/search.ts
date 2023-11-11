@@ -60,6 +60,13 @@ async function createCollection() {
 }
 
 async function createCollectionPoints() {
+  console.log(`
+    -----------------------
+    /// IN PROGRESS... ///
+    -----------------------
+    Creating collection points for: ${COLLECTION_NAME}...
+    `);
+
   const newsletterResources = (await getNewsletterResources(
     "https://unknow.news/archiwum.json"
   )) as NewsLetterLink[];
@@ -88,6 +95,13 @@ async function createCollectionPoints() {
 
   // Upsert
   await upsertCollection(points);
+
+  console.log(`
+  Collection points created!
+  -----------------------
+  /// DONE ///
+  -----------------------
+  `);
 }
 
 async function getNewsletterResources(sourceUrl: string) {
@@ -123,7 +137,7 @@ async function generatePointsWithEmbedding(documents: NewsletterDocument[]) {
   -----------------------
   /// IN PROGRESS... ///
   -----------------------
-  Generating embeddings...
+  Generating points with embedding...
   `);
 
   const points = [];
