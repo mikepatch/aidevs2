@@ -17,7 +17,7 @@
     "rodo": "bun src/tasks/rodo.ts",
     "scraper": "bun src/tasks/scraper.ts",
     "whoami": "bun src/tasks/whoami.ts",
-    "search": "bun src/tasks/search.ts",
+    "search": "bun src/tasks/search/search.ts",
     "people": "bun src/tasks/people/people.ts"
   },
   "author": "MikePatch",

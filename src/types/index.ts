@@ -16,8 +16,3 @@ export type NewsletterDocument = {
   metadata: NewsletterDocumentMetadata;
 };
 
-export type CollectionPoint = {
-  id: string;
-  payload: NewsletterDocumentMetadata;
-  vector: number[];
-};
