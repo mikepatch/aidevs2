@@ -5,6 +5,7 @@
   "main": "index.ts",
   "type": "module",
   "scripts": {
+    "edit": "bun src/sandbox/imageEdit/index.ts",
     "helloapi": "bun src/tasks/helloapi.ts",
     "moderation": "bun src/tasks/moderation.ts",
     "blogger": "bun src/tasks/blogger.ts",
@@ -16,7 +17,8 @@
     "rodo": "bun src/tasks/rodo.ts",
     "scraper": "bun src/tasks/scraper.ts",
     "whoami": "bun src/tasks/whoami.ts",
-    "search": "bun src/tasks/search.ts"
+    "search": "bun src/tasks/search.ts",
+    "people": "bun src/tasks/people.ts"
   },
   "author": "MikePatch",
   "license": "ISC",

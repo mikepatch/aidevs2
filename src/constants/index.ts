@@ -11,6 +11,7 @@ export const TASK_NAMES = {
   scraper: "scraper",
   whoami: "whoami",
   search: "search",
+  people: "people",
 };
 
 export const BLOG_POST_CREATOR_CONTEXT = `As a famous food blogger you create a wonderful and excellent content based on provided paragraph title
