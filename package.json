@@ -18,7 +18,8 @@
     "scraper": "bun src/tasks/scraper.ts",
     "whoami": "bun src/tasks/whoami.ts",
     "search": "bun src/tasks/search/search.ts",
-    "people": "bun src/tasks/people/people.ts"
+    "people": "bun src/tasks/people/people.ts",
+    "knowledge": "bun src/tasks/knowledge/knowledge.ts"
   },
   "author": "MikePatch",
   "license": "ISC",

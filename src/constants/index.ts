@@ -12,6 +12,7 @@ export const TASK_NAMES = {
   whoami: "whoami",
   search: "search",
   people: "people",
+  knowledge: "knowledge",
 };
 
 export const BLOG_POST_CREATOR_CONTEXT = `As a famous food blogger you create a wonderful and excellent content based on provided paragraph title
