@@ -19,7 +19,8 @@
     "whoami": "bun src/tasks/whoami.ts",
     "search": "bun src/tasks/search/search.ts",
     "people": "bun src/tasks/people/people.ts",
-    "knowledge": "bun src/tasks/knowledge/knowledge.ts"
+    "knowledge": "bun src/tasks/knowledge/knowledge.ts",
+    "tools": "bun src/tasks/_tools/tools.ts"
   },
   "author": "MikePatch",
   "license": "ISC",

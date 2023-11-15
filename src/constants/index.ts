@@ -13,6 +13,7 @@ export const TASK_NAMES = {
   search: "search",
   people: "people",
   knowledge: "knowledge",
+  tools: "tools",
 };
 
 export const BLOG_POST_CREATOR_CONTEXT = `As a famous food blogger you create a wonderful and excellent content based on provided paragraph title

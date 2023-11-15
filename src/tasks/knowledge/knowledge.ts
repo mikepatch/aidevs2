@@ -15,10 +15,10 @@ import {
   const { question } = await TasksProvider.getTask(TASK_NAMES.knowledge);
   if (!question) throw new Error("Question not found!");
 
-  const chat = new ChatOpenAI({ modelName: "gpt-4-0613" }).bind({
+  const chat = new ChatOpenAI({ modelName: "gpt-4-1106-preview" }).bind({
     functions: [getCurrentRateSchema, getCurrentPopulationSchema],
   });
-  const tools = {
+  const tools: any = {
     getCurrentRate,
     getCurrentPopulation,
   };
@@ -40,11 +40,9 @@ import {
     response = conversation.content;
   }
 
-  console.log(question);
-
-  console.log(`AI: ${response}\n`);
-
   const answerResponse = await TasksProvider.sendAnswer(response);
 
+  console.log(question);
+  console.log(`AI: ${response}\n`);
   console.log(answerResponse);
 })();
