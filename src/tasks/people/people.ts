@@ -1,6 +1,6 @@
 import { TasksProvider } from "../../services";
 import { TASK_NAMES } from "../../constants";
-import { getAnswer, getPersonInfoFromDB, getPersonName } from "./utils";
+import { getAnswer, getPersonInfoFromDB, getPersonName } from "./helpers";
 
 (async () => {
   const { question } = await TasksProvider.getTask(TASK_NAMES.people);

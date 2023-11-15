@@ -1,6 +1,6 @@
 import { TASK_NAMES } from "../../constants";
 import { TasksProvider } from "../../services";
-import { downloadAudio, getLink, getTranscription } from "./utils";
+import { downloadAudio, getLink, getTranscription } from "./helpers";
 
 (async () => {
   const pathToFile = import.meta.dir + "/whisper.mp3";

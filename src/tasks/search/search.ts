@@ -7,7 +7,7 @@ import {
   isCollectionIndexed,
   searchInCollection,
 } from "../../libs/qdrant/Qdrant";
-import { getNewsletterResources } from "./utils";
+import { getNewsletterResources } from "./helpers";
 
 const COLLECTION_NAME = "newsletter_links";
 const embeddings = new OpenAIEmbeddings({ maxConcurrency: 5 });
