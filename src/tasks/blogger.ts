@@ -1,6 +1,16 @@
-import { BLOG_POST_CREATOR_CONTEXT, TASK_NAMES } from "../constants";
+import { TASK_NAMES } from "../constants";
 import { OpenaiProvider, TasksProvider } from "../services";
 import { CompletionMessage } from "../services/types";
+
+const blogPostCreatorContext = `As a famous food blogger you create a wonderful and excellent content based on provided paragraph title
+###
+Rules:
+1. Write only about the food.
+2. Be creative.
+3. Write 3-5 sentences about provided paragraph title.
+4. Answer only in polish language.
+###
+`;
 
 (async () => {
   const taskName = TASK_NAMES.blogger;
@@ -24,7 +34,7 @@ async function createBlogPost(inputData: string[]) {
   for (const key in inputMessages) {
     const messages: CompletionMessage[] = [];
 
-    messages.push({ role: "system", content: BLOG_POST_CREATOR_CONTEXT });
+    messages.push({ role: "system", content: blogPostCreatorContext });
     messages.push(inputMessages[key]);
 
     const completionResponse = await OpenaiProvider.getCompletion(messages);
