@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "edit": "bun src/sandbox/imageEdit/index.ts",
+    "speech": "bun src/sandbox/textToSpeech/index.ts",
     "helloapi": "bun src/tasks/helloapi.ts",
     "moderation": "bun src/tasks/moderation.ts",
     "blogger": "bun src/tasks/blogger.ts",
@@ -20,7 +21,8 @@
     "search": "bun src/tasks/search/search.ts",
     "people": "bun src/tasks/people/people.ts",
     "knowledge": "bun src/tasks/knowledge/knowledge.ts",
-    "tools": "bun src/tasks/_tools/tools.ts"
+    "tools": "bun src/tasks/_tools/tools.ts",
+    "gnome": "bun src/tasks/gnome/gnome.ts"
   },
   "author": "MikePatch",
   "license": "ISC",

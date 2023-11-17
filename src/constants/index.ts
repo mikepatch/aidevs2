@@ -14,6 +14,7 @@ export const TASK_NAMES = {
   people: "people",
   knowledge: "knowledge",
   tools: "tools",
+  gnome: "gnome",
 };
 
 export const MODEL_NAMES = {
