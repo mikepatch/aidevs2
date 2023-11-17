@@ -25,7 +25,7 @@ import {
 
   const conversation = await chat.invoke([
     new SystemMessage(`
-          Fact: Today is ${currentDate}`),
+          Fact: Today is ${currentDate()}`),
     new HumanMessage(question),
   ]);
 
