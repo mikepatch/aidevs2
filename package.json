@@ -22,7 +22,8 @@
     "people": "bun src/tasks/people/people.ts",
     "knowledge": "bun src/tasks/knowledge/knowledge.ts",
     "tools": "bun src/tasks/_tools/tools.ts",
-    "gnome": "bun src/tasks/gnome/gnome.ts"
+    "gnome": "bun src/tasks/gnome/gnome.ts",
+    "ownapi": "bun src/tasks/ownapi/ownapi.ts"
   },
   "author": "MikePatch",
   "license": "ISC",

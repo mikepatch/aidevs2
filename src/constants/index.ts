@@ -15,6 +15,7 @@ export const TASK_NAMES = {
   knowledge: "knowledge",
   tools: "tools",
   gnome: "gnome",
+  ownapi: "ownapi",
 };
 
 export const MODEL_NAMES = {
