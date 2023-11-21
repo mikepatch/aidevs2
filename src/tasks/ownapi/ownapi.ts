@@ -10,11 +10,4 @@ const API_URL = "https://miketest.bieda.it/ask";
   const answerResponse = await TasksProvider.sendAnswer(API_URL);
 
   console.log(answerResponse);
-  //   const answer = await fetch(API_URL, {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/json" },
-  //     body: JSON.stringify({ question }),
-  //   });
-
-  //   console.log(await answer.json());
 })();
