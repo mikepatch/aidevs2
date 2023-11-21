@@ -23,7 +23,8 @@
     "knowledge": "bun src/tasks/knowledge/knowledge.ts",
     "tools": "bun src/tasks/_tools/tools.ts",
     "gnome": "bun src/tasks/gnome/gnome.ts",
-    "ownapi": "bun src/tasks/ownapi/ownapi.ts"
+    "ownapi": "bun src/tasks/ownapi/ownapi.ts",
+    "ownapipro": "bun src/tasks/ownapipro/ownapipro.ts"
   },
   "author": "MikePatch",
   "license": "ISC",

@@ -16,6 +16,7 @@ export const TASK_NAMES = {
   tools: "tools",
   gnome: "gnome",
   ownapi: "ownapi",
+  ownapipro: "ownapipro"
 };
 
 export const MODEL_NAMES = {
