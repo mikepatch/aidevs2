@@ -16,7 +16,8 @@ export const TASK_NAMES = {
   tools: "tools",
   gnome: "gnome",
   ownapi: "ownapi",
-  ownapipro: "ownapipro"
+  ownapipro: "ownapipro",
+  meme: "meme"
 };
 
 export const MODEL_NAMES = {
