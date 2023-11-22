@@ -25,7 +25,8 @@
     "gnome": "bun src/tasks/gnome/gnome.ts",
     "ownapi": "bun src/tasks/ownapi/ownapi.ts",
     "ownapipro": "bun src/tasks/ownapipro/ownapipro.ts",
-    "meme": "bun src/tasks/meme/meme.ts"
+    "meme": "bun src/tasks/meme/meme.ts",
+    "optimaldb": "bun src/tasks/optimaldb/optimaldb.ts"
   },
   "author": "MikePatch",
   "license": "ISC",

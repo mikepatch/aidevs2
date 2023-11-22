@@ -17,7 +17,8 @@ export const TASK_NAMES = {
   gnome: "gnome",
   ownapi: "ownapi",
   ownapipro: "ownapipro",
-  meme: "meme"
+  meme: "meme",
+  optimaldb: "optimaldb"
 };
 
 export const MODEL_NAMES = {
