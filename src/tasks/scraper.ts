@@ -3,7 +3,7 @@ import { HumanMessage, SystemMessage } from "langchain/schema";
 
 import { TASK_NAMES } from "../constants";
 import { TasksProvider } from "../services";
-import { delayRequest } from "../utils";
+// import { delayRequest } from "../helpers";
 
 (async () => {
   const chat = new ChatOpenAI({ modelName: "gpt-3.5-turbo" });
@@ -43,11 +43,11 @@ async function getArticle(url: string, retries = 3, delay = 3000) {
       return res.text();
     }
 
-    if (retries > 0) {
-      await delayRequest(delay, "Retrying...");
-
-      return getArticle(url, retries - 1);
-    }
+    // if (retries > 0) {
+    //   // await delayRequest(delay, "Retrying...");
+    //
+    //   return getArticle(url, retries - 1);
+    // }
 
     throw new Error(`${res.status} ${res.statusText}`);
   } catch (err) {
