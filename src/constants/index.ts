@@ -18,7 +18,8 @@ export const TASK_NAMES = {
   ownapi: "ownapi",
   ownapipro: "ownapipro",
   meme: "meme",
-  optimaldb: "optimaldb"
+  optimaldb: "optimaldb",
+  google: "google"
 };
 
 export const MODEL_NAMES = {
