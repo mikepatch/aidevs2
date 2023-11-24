@@ -19,7 +19,8 @@ export const TASK_NAMES = {
   ownapipro: "ownapipro",
   meme: "meme",
   optimaldb: "optimaldb",
-  google: "google"
+  google: "google",
+  md2html: "md2html"
 };
 
 export const MODEL_NAMES = {

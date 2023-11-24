@@ -27,7 +27,8 @@
     "ownapipro": "bun src/tasks/ownapipro/ownapipro.ts",
     "meme": "bun src/tasks/meme/meme.ts",
     "optimaldb": "bun src/tasks/optimaldb/optimaldb.ts",
-    "google": "bun src/tasks/google/google.ts"
+    "google": "bun src/tasks/google/google.ts",
+    "md2html": "bun src/tasks/md2html/md2html.ts"
   },
   "author": "MikePatch",
   "license": "ISC",
