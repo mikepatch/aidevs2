@@ -36,3 +36,5 @@ export const MODEL_NAMES = {
   dall_e_3: "dall-e-3",
   dall_e_2: "dall-e-2",
 };
+
+export const API_ROOT = 'https://miketest.bieda.it';
